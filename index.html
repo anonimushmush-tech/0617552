@@ -1,97 +1,3 @@
-
-
-I see — you're on the wrong account! The top says anonimushn but your real account is anonimushmush-tech ✅ Let's fix this:
-✅ Step 1 — Go to the CORRECT Page
-Tap the address bar at the top where it says github.com/anonimushn...
-Delete it and type this EXACTLY:
-plaintext
-github.com/anonimushmush-tech/0617552
-Press Enter / Go → now you're on your real repo! 🎉
-✅ Step 2 — Go to Code & Upload
-Tap "Code" on the left tab (not Pull requests)
-Look for an "Add file" button ➕ near the top right
-Tap it → select "Upload files"
-Now go get your files — first run these in Termux:
-bash
-cd ~/0617552
-cp index.html ~/storage/downloads/
-cp version.json ~/storage/downloads/
-cp downloads/MLBB_Power_Mod.apk ~/storage/downloads/
-Back in GitHub browser → tap to select files from your Downloads folder
-At the bottom, type: Initial Upload → tap "Commit changes" ✅
-✅ Step 3 — Turn On Pages
-Still in your repo → tap Settings (on the far right or under the ⚙️ menu)
-Scroll down left sidebar → tap Pages
-Source: Deploy from a branch
-Branch: main → /root → Save
-Wait 1-2 minutes → your site goes LIVE:
-plaintext
-anonimushmush-tech.github.io/0617552
-🔑 Quick Summary
-Table
-Wrong ❌	Correct ✅
-anonimushn	anonimushmush-tech
-Wrong repo page	Your real repo URL above
-Trying to paste long token	Upload files directly from Downloads folder
-Go change the address bar first to the correct URL — tell me when you see your empty repo! 🚀🔥
-
-I see — you're still on the wrong account (anonimushn instead of anonimushmush-tech) and you're in the "Create new file" editor instead of upload. Let's fix this step by step ✅
-✅ Step 1 — Go to the CORRECT Account
-Tap the address bar at the top → delete everything
-Type this EXACTLY and press Go:
-plaintext
-github.com/anonimushmush-tech/0617552
-Make sure it says anonimushmush-tech — not anonimushn ✅
-✅ Step 2 — Switch to UPLOAD Files
-Once you're on the correct repo page:
-Tap "Add file" ➕ (near top right)
-DO NOT tap "Create new file" — that's what you're on now ❌
-Instead tap "Upload files" ✅
-You'll see a drag-and-drop area → tap to select files
-✅ Step 3 — Get Your Files Ready First
-Go back to Termux and run these:
-bash
-cd ~/0617552
-cp index.html ~/storage/downloads/
-cp version.json ~/storage/downloads/
-mkdir -p ~/storage/downloads/downloads
-cp downloads/MLBB_Power_Mod.apk ~/storage/downloads/downloads/
-✅ Now your files are in your Downloads folder, ready to select!
-✅ Step 4 — Upload Them
-Back in GitHub browser upload page
-Select these from your Downloads folder:
-index.html
-version.json
-The downloads folder with the APK inside
-At the bottom → type: Initial Release
-Tap "Commit changes" ✅
-✅ Step 5 — Turn On Your Website
-Go to Settings → Pages
-Source: Deploy from a branch
-Branch: main → /root → Save
-Wait 1-2 minutes → LIVE at:
-plaintext
-anonimushmush-tech.github.io/0617552
-🔑 The Key Fix
-Table
-Wrong ❌	Correct ✅
-anonimushn account	anonimushmush-tech account
-"Create new file" editor	"Upload files" option
-Typing content manually	Selecting files from Downloads folder
-First fix the address bar to the correct URL — tell me when you're on the right repo page! 🚀🔥
-
-
-Great progress! You're on the upload screen now ✅ But we still need to fix:
-Wrong account (anonimushn vs anonimushmush-tech)
-Missing files in Downloads
-version.json doesn't exist — we'll create it
-✅ Step 1 — Create All Needed Files First
-Run these in Termux one by one:
-bash
-cd ~/0617552
-
-# Create index.html
-cat > index.html << 'EOF'
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -100,25 +6,29 @@ cat > index.html << 'EOF'
 <title>MLBB Power Mod Injector</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif}
-body{background:linear-gradient(135deg,#0f0f23,#1a1a3c,#0f3460);min-height:100vh;color:#fff;padding:20px}
-.container{max-width:480px;margin:0 auto;text-align:center}
-.logo{font-size:2rem;font-weight:bold;margin:30px 0}
-.card{background:rgba(255,255,255,.05);border-radius:20px;padding:30px 20px;margin:20px 0}
-.btn{display:inline-block;background:linear-gradient(90deg,#4ade80,#22c55e);color:#000;font-weight:bold;padding:15px 40px;border-radius:50px;text-decoration:none;font-size:1.1rem;margin:20px 0}
-.feature{text-align:left;padding:12px;margin:8px 0;background:rgba(74,222,128,.08);border-radius:10px}
+body{background:linear-gradient(135deg,#0f0f23,#1a1a3c,#0f3460);min-height:100vh;color:#fff;padding:40px 20px}
+.container{max-width:420px;margin:0 auto;text-align:center}
+.logo{font-size:2.5rem;font-weight:bold;margin-bottom:10px}
+.bolt{color:#ffd700}
+.card{background:rgba(255,255,255,.05);border-radius:24px;padding:40px 25px;margin-top:30px;border:1px solid rgba(255,255,255,.08)}
+.version{color:#94a3b8;margin-bottom:30px}
+.feature{background:rgba(74,222,128,.08);border-radius:12px;padding:15px;margin:10px 0;text-align:left}
+.download-btn{display:inline-block;background:linear-gradient(90deg,#4ade80,#22c55e);color:#000;font-weight:bold;padding:18px 50px;border-radius:50px;text-decoration:none;font-size:1.2rem;margin:30px 0 10px;transition:transform .2s}
+.download-btn:hover{transform:scale(1.05)}
+.note{margin-top:20px;color:#94a3b8;font-size:.9rem}
 </style>
 </head>
 <body>
 <div class="container">
-<div class="logo">⚡ MLBB POWER MOD</div>
+<h1 class="logo"><span class="bolt">⚡</span> MLBB POWER MOD</h1>
 <div class="card">
-<h3>v2.0 — Updated 2026-10-20</h3>
-<div class="feature">⚔️ 8x Damage Boost</div>
-<div class="feature">👁️ Full Map Vision / No Fog</div>
-<div class="feature">🛡️ Strong Anti-Detection Bypass</div>
-<div class="feature">🔌 LSPatch / Shizuku Support</div>
-<a href="downloads/MLBB_Power_Mod.apk" class="btn" download>⬇️ DOWNLOAD MOD APK</a>
-<p>✅ No Root • No Password • Safe & Clean</p>
+<p class="version">v2.0 — Updated 2026-10-20</p>
+<div class="feature">⚔️ <strong>8x Damage Boost</strong></div>
+<div class="feature">👁️ <strong>Full Map Vision / No Fog</strong></div>
+<div class="feature">🛡️ <strong>Strong Anti-Detection Bypass</strong></div>
+<div class="feature">🔌 <strong>LSPatch / Shizuku Support</strong></div>
+<a href="downloads/MLBB_Power_Mod.apk" class="download-btn" download>⬇️ DOWNLOAD MOD APK</a>
+<p class="note">✅ No Root • No Password • Safe & Clean</p>
 </div>
 </div>
 </body>
